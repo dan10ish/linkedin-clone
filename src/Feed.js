@@ -16,7 +16,7 @@ function Feed() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        db.collection("posts").onSnapshot(snapshot => (
+        db.collection("posts").orderBy("timestamp", "desc").onSnapshot(snapshot => (
             setPosts(snapshot.docs.map(doc => (
                 {
                     id: doc.id,
@@ -36,6 +36,8 @@ function Feed() {
             photoUrl: '',
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         })
+
+        setInput("");
     }
 
     return (
@@ -57,12 +59,15 @@ function Feed() {
             </div>
 
             {/* Posts */}
-            {posts.map((post) => (
-                <Post />
+            {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
+                <Post
+                    key={id}
+                    name={name}
+                    description={description}
+                    message={message}
+                    photoUrl={photoUrl}
+                />
             ))}
-
-
-            <Post name='Danish Ansari' description='This is a test' message='Wow this worked!' />
 
         </div>
     )
