@@ -1,4 +1,4 @@
-.app{
+.app {
     background-color: #f3f2ef;
     display: flex;
     flex-direction: column;
@@ -7,4 +7,5 @@
 
 .app__body {
     display: flex;
+    width: 100%;
 }
