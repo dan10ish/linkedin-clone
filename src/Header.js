@@ -11,6 +11,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout, selectUser } from './features/userSlice';
 import { auth } from './firebase';
+import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 
 function Header() {
 
@@ -38,7 +39,7 @@ function Header() {
                 <HeaderOption Icon={BusinessCenterIcon} title="Jobs" />
                 <HeaderOption Icon={ChatIcon} title="Messaging" />
                 <HeaderOption Icon={NotificationsIcon} title="Notifications" />
-                <HeaderOption avatar={true} title="Me" onClick={logoutOfApp} />
+                <HeaderOption Icon={PowerSettingsNewIcon} title="Logout" onClick={logoutOfApp} />
             </div>
         </div>
     )
