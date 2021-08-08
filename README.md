@@ -22,8 +22,9 @@ Login Page:
 <br>
 
 <p align="center">
-  <video width="320" height="240" controls>
+  <video width="360px" height="240" controls="true" allowfullscreen="true">
   <source src="./src/Resources/Showcase.mp4" type="video/mp4">
+  <source src="./src/Resources/Showcase.webm" type="video/webm">
   Your browser does not support the video tag.
 </video>
 </p>
