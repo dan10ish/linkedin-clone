@@ -28,7 +28,7 @@ Login Page:
 
 Main App: 
 <p align="center">
-  <img src="./src/Resources/main.png" width="550px" title="Main Page">
+  <img src="./src/Resources/Main.png" width="550px" title="Main Page">
 </p>
 
 <br>
